@@ -12,7 +12,7 @@ var app = new Vue({
           .then((response) => {
             console.log(response.data.response),
             this.array_email.push(response.data.response) ;
-            if (i == 10) {
+            if (this.array_email.length == 9) {
               this.boolean = true;
             }
           });
