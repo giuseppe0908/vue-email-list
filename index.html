@@ -4,18 +4,34 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+  <style media="screen">
+    body{
+      background-color: cyan;
+      /* text-align: center; */
+    }
+    #root{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1{
+      color: white;
+      font-size: 40px;
+    }
+    ol li{
+      font-size: 20px;
+    }
+  </style>
   <body>
     <div id="root">
-
+      <h1>Ecco l'email</h1>
         <ol>
-          <li v-if="(boolean)" v-for="(email) in array_email">{{ email }}</li>
+          <li v-if="(array_email.length == 10 )" v-for="(email) in array_email">{{ email }}</li>
         </ol>
 
       <button @click="genera" type="button" name="button">genera email</button>
 
     </div>
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
