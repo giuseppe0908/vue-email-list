@@ -8,9 +8,9 @@
     <div id="root">
 
         <ol>
-          <li v-for="(email) in array_email">{{ email }}</li>
+          <li v-if="array_email.length == 10" v-for="(email) in array_email">{{ email }}</li>
         </ol>
-        
+
       <button @click="genera" type="button" name="button">genera email</button>
 
     </div>
